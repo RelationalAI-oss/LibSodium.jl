@@ -33,7 +33,7 @@ wc = init(; headers = HEADER_PATHS,
             clang_args = ["-I", joinpath(LIBSODIUM_INCLUDE, "..")],
             header_wrapped = (root, current)->root == current,
             header_library = x->"libsodium",
-	        cursor_wrapped = cursor_wrapped,
+            cursor_wrapped = cursor_wrapped,
             clang_diagnostics = true,
             )
 
