@@ -1,0 +1,9 @@
+name = "LibSodium"
+uuid = "137d66ad-d6bc-4d2e-9ad7-93797bb80109"
+version = "0.1.0"
+
+[deps]
+libsodium_jll = "a9144af2-ca23-56d9-984f-0d03f7b5ccf8"
+
+[compat]
+julia = "1.3"
