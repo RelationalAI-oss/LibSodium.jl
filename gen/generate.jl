@@ -39,25 +39,4 @@ wc = init(; headers = HEADER_PATHS,
 
 run(wc)
 
-function write_exports(filename::AbstractString, startswith_identifier::AbstractString, exports_file)
-    open(filename, "r") do file
-        lines = split(read(file, String), "\n")
-
-        for line in lines
-            if startswith(line, startswith_identifier)
-                @printf exports_file "export %s\n" split(line, r" |\(")[2]
-            end
-        end
-    end
-end
-
-# Generate export statements
-open(joinpath(OUTPUT_DIR, "exports.jl"), "w+") do exports_file
-    println(exports_file, "# Generating exports")
-
-    write_exports(joinpath(OUTPUT_DIR, "common.jl"), "const", exports_file)
-    write_exports(joinpath(OUTPUT_DIR, "common.jl"), "struct", exports_file)
-    write_exports(joinpath(OUTPUT_DIR, "api.jl"), "function", exports_file)
-end
-
 end
