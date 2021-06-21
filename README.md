@@ -1,3 +1,5 @@
+_**This Repo is DEPRECATED. Please prefer https://github.com/Gnimuc/Sodium.jl.**_
+
 # LibSodium.jl
 This packages generates Julia bindings for (part of) the `libsodium` library, relying on
 `Clang.jl`.
